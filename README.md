@@ -57,4 +57,4 @@ yarn develop
 * http://geo.stp.gov.py/user/dgeec/
 * https://www.datos.gov.py/organization/dgeec
 * https://www.globalforestwatch.org
-https://services8.arcgis.com/42b0Qdp06t8fyz6z/arcgis/rest/services/Comunidades_1/FeatureServer/0/query?outFields=*&where=1%3D1
+https://services8.arcgis.com/42b0Qdp06t8fyz6z/arcgis/rest/services/Comunidades_1/FeatureServer/0/query?outFields=*&where=1%3D1 
