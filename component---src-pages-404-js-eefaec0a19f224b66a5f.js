@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w2l6:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),l=t("7oih"),o=t("VUD3");n.default=function(){return c.a.createElement(l.a,null,c.a.createElement(o.a,{type:"content",className:"text-center"},c.a.createElement("h1",null,"Pagina No Encontrada"),c.a.createElement("p",null,"Esta dirección no existe... bajon.")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-eefaec0a19f224b66a5f.js.map
