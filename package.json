@@ -28,6 +28,7 @@
     "eslint-config-zurgbot": "^0.0.6",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "jest": "^25.2.7",
     "lint-staged": "^10.1.1",
@@ -45,6 +46,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "bump": "npm version",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
