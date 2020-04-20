@@ -46,3 +46,15 @@ gatsby new new-gatsby-site https://github.com/colbyfayock/gatsby-starter-leaflet
 yarn develop
 ```
 * You should now be running a new Gatsby site locally! 🎉
+
+### Fuentes de datos Indigenas
+
+* https://www.fapi.org.py
+* https://data-fapi.opendata.arcgis.com/
+* https://data-fapi.opendata.arcgis.com/datasets/comunidades-1
+* https://www.tierrasindigenas.org/
+* https://www.dgeec.gov.py/
+* http://geo.stp.gov.py/user/dgeec/
+* https://www.datos.gov.py/organization/dgeec
+* https://www.globalforestwatch.org
+https://services8.arcgis.com/42b0Qdp06t8fyz6z/arcgis/rest/services/Comunidades_1/FeatureServer/0/query?outFields=*&where=1%3D1

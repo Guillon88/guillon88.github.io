@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { Map as BaseMap, TileLayer, ZoomControl } from 'react-leaflet';
+import { Map as BaseMap, TileLayer, ZoomControl, ScaleControl, LayersControl } from 'react-leaflet';
 
 import { useConfigureLeaflet, useMapServices, useRefEffect } from 'hooks';
 import { isDomAvailable } from 'lib/util';
 
 const DEFAULT_MAP_SERVICE = 'OpenStreetMap';
 
-const Map = ( props ) => {
+const Map = (props) => {
   const { children, className, defaultBaseMap = DEFAULT_MAP_SERVICE, mapEffect, ...rest } = props;
 
   const mapRef = useRef();
@@ -22,15 +22,15 @@ const Map = ( props ) => {
   const services = useMapServices({
     names: [...new Set([defaultBaseMap, DEFAULT_MAP_SERVICE])],
   });
-  const basemap = services.find(( service ) => service.name === defaultBaseMap );
-
+  const basemap = services.find((service) => service.name === defaultBaseMap);
+  console.log(basemap);
   let mapClassName = `map`;
 
-  if ( className ) {
+  if (className) {
     mapClassName = `${mapClassName} ${className}`;
   }
 
-  if ( !isDomAvailable()) {
+  if (!isDomAvailable()) {
     return (
       <div className={mapClassName}>
         <p className="map-loading">Loading map...</p>
@@ -47,9 +47,18 @@ const Map = ( props ) => {
   return (
     <div className={mapClassName}>
       <BaseMap ref={mapRef} {...mapSettings}>
-        { children }
-        { basemap && <TileLayer {...basemap} /> }
+        {children}
+        {basemap && <TileLayer {...basemap} />}
         <ZoomControl position="bottomright" />
+        <ScaleControl position="bottomleft" />
+        <LayersControl position="topright">
+          <LayersControl.BaseLayer name="OpenStreetMap.BlackAndWhite">
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
+            />
+          </LayersControl.BaseLayer>
+        </LayersControl>
       </BaseMap>
     </div>
   );
